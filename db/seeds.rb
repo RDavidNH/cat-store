@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Item.destroy_aLl
 
 10.times do |index|
 	item = Item.create(
@@ -14,3 +15,5 @@
 		image_url: " "
 	)
 end
+
+
