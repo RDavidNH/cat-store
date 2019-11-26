@@ -23,7 +23,7 @@
 }
 
 .card img {
-    transition: transform 2s;
+    transition: transform 0.3s;
 }
 
 .card img:hover {
@@ -130,4 +130,8 @@
     color: #0062cc;
     font-weight: 600;
     text-decoration: none;
+}
+
+body {
+    background: #f7f7f7;
 }
