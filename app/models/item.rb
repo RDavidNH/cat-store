@@ -8,7 +8,8 @@ class Item < ApplicationRecord
 	validates :price, presence: true,
 		:if => :price_validation
 
-
+	has_many :cart_items
+	has_many :carts, through: :cart_items
 
 	def price_validation
 		if self.price.blank?
