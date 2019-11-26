@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
 
-  devise_scope :user do
-    root to: "devise/sessions#new"
-  end
+  get 'items/index'
+  get 'items/create'
+  get 'items/update'
+  get 'items/delete'
+  get 'items/new'
+  get 'items/show'
+  # devise_scope :user do
+  #   root to: "devise/sessions#new"
+  # end
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
+  resources :items
+  root "items#index"
 end

@@ -27,3 +27,33 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<hr>
+
+<div class="container login-container">
+<div class="row">
+    <div class="col-md-6 offset-md-3 login-form-1"> 
+    <h3>S'inscrire</h3>
+        <form>
+        
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nom" value="" />
+            </div>
+            <div class="form-group">
+                <input type="prenom" class="form-control" placeholder="Prenom" value="" />
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" value="" />
+            </div>
+            <div class="form-group">
+                <input type="mdp" class="form-control" placeholder="Mot de passe" value="" />
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btnSubmit" value="S'inscrire" />
+            </div>
+            <div class="form-group">
+                <a href="#" class="ForgetPwd">Forget Password?</a>
+            </div>
+            
+        </form>
+    </div>
