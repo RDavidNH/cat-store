@@ -1,0 +1,110 @@
+.imgFilter{
+	filter: brightness(0.80);
+	
+
+}
+
+
+.newColorPurple{
+background-color: #8f4a8a;
+border: none; 
+color: white;
+
+}
+
+.logo1{
+	animation: scaleLogo 2s infinite alternate;
+}
+
+@keyFrame scaleLogo{
+	top{
+		transform: scale(1.2);
+	}
+}
+
+*{
+	scroll-behavior: smooth;
+}
+
+.card img{
+	transition: transform 2s;
+
+}
+
+.card img:hover{
+	transform: scale(1.1)
+
+
+}
+
+.cardImg{
+	position: relative;
+	overflow: hidden ;
+	cursor: pointer; 
+
+}
+
+
+
+
+
+
+ .container .carousel-caption{
+	  align-items: center;
+
+
+}
+.imgFilter{
+	width: 100%;
+	height: 100%;
+}
+
+#btn{
+	background-color: #550055;
+    color:white;
+    padding:0.5rem 0.5rem;
+    margin-top:25px;
+    display:inline;
+    border:0;
+    border-radius:4px;
+    font-weight: 80;
+    text-decoration: none;
+    cursor: pointer;
+    text-align:center;
+	transition:all;
+}
+#container{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	padding:15px;
+	background:#35424a;
+	
+
+}
+#container h1{
+	float:left;
+
+}
+
+#container form{
+	float:right;
+	margin-top: 15px;
+
+}
+#container input[type="email"]{
+	padding:4px;
+	height: 25px;
+	width: 250px;
+
+}
+.button_1{
+	height: 38px;
+	background:#e8491d;
+	border:0;
+	padding-left: 20px;
+	/* padding-right: 20px; */
+	color:#ffff;
+	margin-right: 0%;
+}
+
