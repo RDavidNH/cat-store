@@ -1,4 +1,4 @@
-<h2>Log in</h2>
+<!-- <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -23,46 +23,56 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "devise/shared/links" %> -->
 
 
+ <button class="btn btn-secondary" id="essaie"> Valider </button>
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Sign In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span arria-hidden="true" class="x-char">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="signin-modal">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          
+          <%= render "devise/shared/error_messages", resource: resource %>
+              
+        <div class="form-group">
+              <%= f.email_field :email ,autofocus: true, autocomplete: "email" , class:"form-control" ,placeholder:"Votre email"%>
+        </div>
 
-<hr>
-<div class="container login-container">
-            <div class="row">
-                <div class="col-md-6 offset-md-3 login-form-1">
-                    <h3> Se Connecter</h3>
+        <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "new-password" ,class:"form-control" ,placeholder:"Mot de passe" %>
+        </div>
 
+        <br/>
 
-                    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                    <div class="field">
-                      <%= f.label :email %><br />
-                      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-                    </div>
+            <% if devise_mapping.rememberable? %>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+            <% end %>
 
-                            <div class="field">
-                              <%= f.label :password %><br />
-                              <%= f.password_field :password, autocomplete: "current-password" %>
-                            </div>
-                              
-                                    <% if devise_mapping.rememberable? %>
-                                    <div class="field">
-                                      <%= f.check_box :remember_me %>
-                                      <%= f.label :remember_me %>
-                                    </div>
-                                  <% end %>
-
-                                          <div class="actions">
-                                            <%= f.submit "Log in" %>
-                                          </div>
-                                        <% end %>
-                                        
-                                        <%= render "devise/shared/links" %>
-                              
-                        </div>
-                    </form>
-                </div>
+            <div class="actions form-group">
+              <%= f.submit "Log in",  class: "btn btn-block", style: "background-color: #C6CFF7;" %>
             </div>
+          <%= render "devise/shared/links" %>  <br/>
+          <% end %> 
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="close-modal btn" style="background-color: #D7DAE6;" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
