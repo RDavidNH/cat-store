@@ -21,8 +21,16 @@
                 <i style="color: yellow; " id="cart_n"></i>
             </a>
 
-            <a data-toggle="modal" data-target="modalCenter" class="nav-link disable text-white " href="#">
-                <i class="far fa-user"></i> LOGIN
+            <div class="dropdown">
+                <ul class="dropdown-menu">
+                  <div style="text-align: center;">Connexion</div>
+                  <div class="dropdown-divider"></div>
+                  <li id="login"><a href="#">Log In</a></li>
+                  <li><a href="#">Log Out</a></li>
+                </ul>
+            </div>
+            <a data-toggle="modal" data-target="modalCenter" class="nav-link disable text-white " href="#" id="connexion-icon">
+                <i class="far fa-user"></i>
             </a>
         </form>
     </div>

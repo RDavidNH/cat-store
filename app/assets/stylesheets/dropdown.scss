@@ -1,0 +1,26 @@
+
+.dropdown {
+	//z-index: 10;
+	position: absolute;
+	right: 100px;
+	top: 60px;	
+}
+
+
+.dropdown-menu li {
+	text-align: center;
+}
+
+.dropdown-menu a {
+	color: black;
+	padding: 5px 16px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.dropdown-menu a:hover {
+	text-decoration: none;
+	background:#a7cce5;
+	display: block;
+	text-align: center;
+}

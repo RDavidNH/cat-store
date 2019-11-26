@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	$('#essaie').click(function(e){
+	$('#connexion-icon').click(function(e){
 		e.preventDefault();
 		$('.modal').show();
 	});
