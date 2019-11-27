@@ -1,0 +1,59 @@
+<%= render 'carousel' %>
+
+<br>
+
+<div class="container">
+  <div class="row">
+
+  <% @item.each do |i| %>
+    <div class="col-sm-4 mb-4">
+
+      <div class="card h-100 shadow">
+        <!-- <a href="#"><img class="card-img-top" src="./img/chat7.jpg" alt="" style="height:200px"></a> -->
+        <%= image_tag 'sleepcutecat.jpg', width: '100%', class: ''  %>
+        <div class="card-body">
+            <h4 class="card-title">
+                <%= i.title %>
+            </h4>
+            <h5>$<%= i.price %></h5>
+            <p class="card-text"><%= i.description %></p>
+            <!--
+            <span class="entourer1">
+                <input id="btn" type="Button" value="Buy">
+            </span>
+            -->
+            <span class="entourer2">
+                  <%= link_to 'Voir', item_path(i.id), class: "btn btn-primary" %>
+                  <%= link_to 'Ajouter au panier', carts_path(:id => i.id), method: 'post', class: 'btn btn-outline-primary' %>
+            </span>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+        </div>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+<!--
+	<hr>
+
+	<h1>Welcome to Chattons</h1>
+	<table class="table table-hover table-bordered ">
+	  <thead>
+	    <tr>
+	      <th scope="col">Product</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <% @item.each do |content|%>
+	    <tr class="table-secondary">
+	      <td><%= link_to content.title, item_path(content.id) %></td>
+	    </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+-->
