@@ -44,6 +44,26 @@
             <% end %>
         </tbody>
     </table>
+
+    <table class="table table-striped" style="margin-top: 50px;">
+        <thead>
+            <tr>
+                <th> Description </th>
+                <th> Quantité</th>
+                <th> Prix</th>
+            </tr>
+        <thead>
+
+        <tbody>
+            <tr>
+                <td> Total </td> 
+                <td> <%= @quantity_total %> </td>
+                <td> <%= number_to_currency @price_total, unit: "€", separator: ",", format: "%n%u" %> </td>
+                
+            </tr>
+        </tbody>
+    
+    </table>
 <% else %>
     <h3>No items</h3>
 <% end %>
