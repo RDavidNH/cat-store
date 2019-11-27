@@ -1,14 +1,15 @@
 $(document).ready(function(){
 	
-	$('#connexion-icon').click(function(e){
+	$('#log-in').click(function(e){
 		e.preventDefault();
-		$('.modal').show();
+		console.log('qsddsqd');
+		// $('#signinModal').fadeToggle(1000);
 	});
 
 
-	$('.modal').click(function(e){
-		if ($(e.target).hasClass('modal') || $(e.target).hasClass('close') || $(e.target).hasClass('x-char') || $(e.target).hasClass('close-modal')) {
-		 	$('.modal').hide();
-		}
-	});
+	// $('#signin-modal').click(function(e){
+	// 	if ($(e.target).hasClass('modal') || $(e.target).hasClass('close') || $(e.target).hasClass('x-char') || $(e.target).hasClass('close-modal')) {
+	// 	 	$('#signin-modal').hide();
+	// 	}
+	// });
 });
