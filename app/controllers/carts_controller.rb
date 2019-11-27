@@ -18,7 +18,17 @@ class CartsController < ApplicationController
             current_user.save
         end
 
-        cart_items = CartItem.create(cart: current_cart, item: item, quantity: 1)
+
+        order = CartItem.find_by(item: item, cart: current_cart)
+
+        if order
+        	order.quantity += 1
+        	order.save
+
+        else
+        	cart_items = CartItem.create(cart: current_cart, item: item, quantity: 1)
+        end
+
                 
     end
 

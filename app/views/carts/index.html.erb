@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-sm-12">
             <h1>index cart</h1>
@@ -13,5 +13,41 @@
                 <h3>No items</h3>
             <% end %>
         </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+<h1> Contenu du panier</h1>
+ <% if @cart_items %>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th> Title </th>
+                <th> Description </th>
+                <th> Image </th>
+                <th> Quantity</th>
+                <th> Prix </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @cart_items.each do |i| %>
+                <tr>
+                    <td> <%= i.item.title%> </td>
+                    <td> <%= i.item.description %> </td>
+                    <td> <%= image_tag 'sleepcutecat.jpg', width: 50, class: '' %></td>
+                    <td> <%= i.quantity %></td>
+                    <td> <%= number_to_currency i.item.price, unit: "€", separator: ",", format: "%n%u" %> </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+<% else %>
+    <h3>No items</h3>
+<% end %>
+
+    </div>
     </div>
 </div>
