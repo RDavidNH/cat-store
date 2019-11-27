@@ -20,7 +20,7 @@
         <form class="form-inline mt-2 mt-md-0">
 
             <% if user_signed_in? %>
-            <a class="text-white nav-link" href="cart.html">
+            <a class="text-white nav-link" href="<%= carts_path %>">
                 <i class="text-warning fas fa-shopping-cart"> </i> Shopping Cart
                 <i style="color: yellow; " id="cart_n"></i>
             </a>

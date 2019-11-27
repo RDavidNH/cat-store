@@ -1,7 +1,9 @@
 class CartsController < ApplicationController
 
     def index
-        @cart_items = current_user.cart.cart_items
+        if current_user.cart
+            @cart_items = current_user.cart.cart_items
+        end
     end
 
     def create
@@ -17,11 +19,6 @@ class CartsController < ApplicationController
         end
 
         cart_items = CartItem.create(cart: current_cart, item: item, quantity: 1)
-
-        puts '*' * 12
-        puts current_user.email
-        p current_cart.cart_items
-        puts '*' * 12
                 
     end
 
