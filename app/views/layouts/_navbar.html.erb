@@ -23,18 +23,34 @@
                 <i style="color: yellow; " id="cart_n"></i>
             </a>
 
-            <div class="dropdown">
-                <ul class="dropdown-menu">
-                    <li style="text-align: center;">Connexion</li>
-                    <li><div class="dropdown-divider"></div></li>
-                    <li id="log-in" data-toggle="modal" data-target="#signinModal">
-                        <span>Log In</span>
-                    </li>
-                    <li id="sign-up" data-toggle="modal" data-target="#signupModal">
-                       <span>Sign Up</span>
-                    </li>
-                </ul>
-            </div>
+            <% if user_signed_in? %>
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li style="text-align: center;">Connexion</li>
+                        <li><div class="dropdown-divider"></div></li>
+                        <li>
+                            <%= link_to "Mon profil", user_path(current_user.id), data: { method: "get"}, class: "dropdown-item" %>
+                        </li>
+                        
+                        <li>
+                           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+                        </li>
+                    </ul>
+                </div>
+            <% else %>
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li style="text-align: center;">Connexion</li>
+                        <li><div class="dropdown-divider"></div></li>
+                        <li id="log-in" data-toggle="modal" data-target="#signinModal">
+                            <span>Log In</span>
+                        </li>
+                        <li id="sign-up" data-toggle="modal" data-target="#signupModal">
+                           <span>Sign Up</span>
+                        </li>
+                    </ul>
+                </div>
+            <% end %>
             <a data-toggle="dropdown" data-target="modalCenter" class="nav-link disable text-white dropdown-toggle" href="#" id="connexion-icon">
                 <i class="far fa-user"></i>
             </a>
