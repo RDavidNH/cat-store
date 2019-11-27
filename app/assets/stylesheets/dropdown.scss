@@ -11,14 +11,29 @@
 	text-align: center;
 }
 
-.dropdown-menu a {
+// .dropdown-menu a {
+// 	color: black;
+// 	padding: 5px 16px;
+// 	text-decoration: none;
+// 	display: inline-block;
+// }
+
+.dropdown-menu span {
 	color: black;
 	padding: 5px 16px;
 	text-decoration: none;
 	display: inline-block;
 }
 
+
 .dropdown-menu a:hover {
+	text-decoration: none;
+	background:#a7cce5;
+	display: block;
+	text-align: center;
+}
+
+.dropdown-menu li:hover {
 	text-decoration: none;
 	background:#a7cce5;
 	display: block;
