@@ -23,8 +23,8 @@
             </span>
             -->
             <span class="entourer2">
-                <%= link_to 'Voir', item_path(i.id), class: "btn btn-primary" %>
-                <button class="btn btn-outline-primary">Ajouter au panier</button>
+                  <%= link_to 'Voir', item_path(i.id), class: "btn btn-primary" %>
+                  <%= link_to 'Ajouter au panier', carts_path(:id => i.id), method: 'post', class: 'btn btn-outline-primary' %>
             </span>
         </div>
         <div class="card-footer">

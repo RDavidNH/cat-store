@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>index cart</h1>
+
+            <ul>
+                <% @cart_items.each do |ci| %>
+                    <li><%= ci.item.title %></li>    
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>
