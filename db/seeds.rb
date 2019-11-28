@@ -15,3 +15,10 @@ Item.destroy_all
 		image_url: " "
 	)
 end
+
+3.times do |i|
+	user = User.create(
+		email: "admin#{i}@yopmail.com",
+		password: "adminadmin"
+	)
+end

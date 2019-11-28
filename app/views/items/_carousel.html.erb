@@ -1,0 +1,61 @@
+<div id="myCarousel" class="carousel slide" date-ride="carousel">
+    <ol class="carousel-indicators">
+        <li style="z-index:102;" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li style="z-index:102;" data-target="#myCarousel" data-slide-to="1"></li>
+        <li style="z-index:102;" data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <%= image_tag 'slide2.jpg', width: '100%' %>
+            <!-- <img class="imgFilter first-slide" width="100%" src="./img/sleepcutecat.jpg" role="img"> -->
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas
+                        eget quam. Donec id elit non mi porta gravida at eget metus.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <%= image_tag 'slide4.jpg', width: '100%'  %>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas
+                        eget quam. Donec id elit non mi porta gravida at eget metus.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <%= image_tag 'slide1.jpg', width: '100%'  %>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas
+                        eget quam. Donec id elit non mi porta gravida at eget metus.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
