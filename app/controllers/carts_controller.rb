@@ -1,10 +1,14 @@
 class CartsController < ApplicationController
 
+    before_action :authenticate_user
+
     def index
-        if current_user.cart
-            @cart_items = current_user.cart.cart_items
-            quantity_total
-            price_total
+        current_cart = Cart.find_by(:user => current_user, :status => "on")
+
+        if current_cart
+            @cart_items = current_cart.orders
+            quantity_total(@cart_items)
+            price_total(@cart_items)
         end
     end
 
@@ -12,37 +16,45 @@ class CartsController < ApplicationController
 
         item = Item.find(params[:id])
 
-        if current_user.cart
-            current_cart = current_user.cart
-        else 
-            current_cart = Cart.create()
-            current_user.cart = current_cart
-            current_user.save
+        current_cart = Cart.find_by(:user => current_user, :status => "on")
+
+        if not current_cart
+            current_cart = Cart.create(:user => current_user, :status => "on")
         end
 
+        order = Order.create(:cart => current_cart, :item => item, :quantity => params[:quantity])
 
-        order = CartItem.find_by(item: item, cart: current_cart)
+        # if current_user.cart
+        #     current_cart = current_user.cart
+        # else
+        #     current_cart = Cart.create()
+        #     current_user.cart = current_cart
+        #     current_user.save
+        # end
 
-        if order
-        	order.quantity += 1
-        	order.save
-        else
-        	cart_items = CartItem.create(cart: current_cart, item: item, quantity: 1)
-        end
 
-                
+        # order = CartItem.find_by(item: item, cart: current_cart)
+
+        # if order
+        # 	order.quantity += 1
+        # 	order.save
+        # else
+        # 	cart_items = CartItem.create(cart: current_cart, item: item, quantity: 1)
+        # end
+
+
     end
 
     def update
-        
-    end
-
-    def destroy 
 
     end
 
-    def quantity_total
-        cart_items_to_sum = current_user.cart.cart_items
+    def destroy
+
+    end
+
+    def quantity_total(orders)
+        cart_items_to_sum = orders
         @quantity_total = 0
         cart_items_to_sum.each do |item|
             @quantity_total = @quantity_total + item.quantity
@@ -50,12 +62,12 @@ class CartsController < ApplicationController
         return @quantity_total
     end
 
-    def price_total 
-        cart_items_to_sum = current_user.cart.cart_items
+    def price_total(orders)
+        cart_items_to_sum = orders
         @price_total = 0
 
         cart_items_to_sum.each do |product|
-            each_line_price = product.quantity * product.item.price 
+            each_line_price = product.quantity * product.item.price
             @price_total =  @price_total + each_line_price
         end
         return @price_total
