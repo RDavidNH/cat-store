@@ -9,9 +9,10 @@ Item.destroy_all
 
 12.times do |index|
 	item = Item.create(
-		title: Faker::Lorem.sentence(word_count: 2),
-		description: Faker::Lorem.sentence(word_count: 3),
-		price: (index + 1),
+		title: Faker::Creature::Cat.name,
+		# title: Faker::Lorem.sentence(word_count: 2),
+		description: Faker::Creature::Cat.breed,
+		price: Faker::Number.between(from: 15, to: 100),
 		image_url: " "
 	)
 end
@@ -19,6 +20,9 @@ end
 3.times do |i|
 	user = User.create(
 		email: "admin#{i}@yopmail.com",
-		password: "adminadmin"
+		password: "adminadmin",
+		firstname: Faker::Name.first_name,
+		lastname: Faker::Name.last_name,
+		description: Faker::Lorem.paragraph(sentence_count: 5)
 	)
 end
