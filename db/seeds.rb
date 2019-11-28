@@ -19,10 +19,10 @@ end
 
 3.times do |i|
 	user = User.create(
-		email: "admin#{i}@yopmail.com",
+		email: "csadmin#{i}@yopmail.com",
 		password: "adminadmin",
-		firstname: Faker::Name.first_name,
-		lastname: Faker::Name.last_name,
+		first_name: Faker::Name.first_name,
+		last_name: Faker::Name.last_name,
 		description: Faker::Lorem.paragraph(sentence_count: 5)
 	)
 end
