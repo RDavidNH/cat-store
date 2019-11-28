@@ -30,6 +30,14 @@
             color: white;
         } */
 
+        .bg-yellow {
+            background: #ffc1074d !important;
+        }
+
+        .bg-primary {
+            background: #ac6da8 !important;
+        }
+
         .btn-primary {
             background: #ac6da8;
             border-color: #ac6da8;
@@ -59,6 +67,15 @@
   <body>
 
   <%= render 'layouts/navbar' %>
+
+  <% flash.each do |key, value| %>
+    <div class="m-0 alert alert-<%= key %> alert-dismissible fade show" role="alert">
+      <%= value %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% end %>
 
 <!--
     <p class="notice"><%= notice %></p>
