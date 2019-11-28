@@ -3,24 +3,28 @@ class ItemsController < ApplicationController
     @item = Item.all
   end
 
-  def create
-  
-  end
-
-  def update
-  
-  end
-
-  def delete
-  
+  def show
+      @current_item = Item.find(params[:id])
   end
 
   def new
 
   end
 
-  def show
-    @current_item = Item.find(params[:id])
+  def create
+
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
   end
 
 end
