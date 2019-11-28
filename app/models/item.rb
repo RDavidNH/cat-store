@@ -1,9 +1,9 @@
 class Item < ApplicationRecord
 	validates :title, presence: true,
-		length: { in: 6..150 }
+		length: { in: 4..150 }
 
 	validates :description, presence: true,
-		length: { in: 6..1000 }
+		length: { in: 4..1000 }
 
 	validates :price, presence: true,
 		:if => :price_validation
