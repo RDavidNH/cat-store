@@ -8,7 +8,7 @@
              <% if @cart_items %>
                 <table class="table table-striped table-hover">
                     <thead>
-                        <tr>
+                        <tr class="bg-primary text-white">
                             <th> Title </th>
                             <th> Description </th>
                             <th> Image </th>
@@ -27,31 +27,21 @@
                                 <td> <%= number_to_currency i.item.price, unit: "€", separator: ",", format: "%n%u" %> </td>
                             </tr>
                         <% end %>
+                        <tr class="bg-yellow">
+                            <th> Total </th>
+                            <td></td>
+                            <td></td>
+                            <td> <%= @quantity_total %> </td>
+                            <td> <%= number_to_currency @price_total, unit: "€", separator: ",", format: "%n%u" %> </td>
+                        </tr>
                     </tbody>
                 </table>
-            <% else %>
-                <h3>No items</h3>
-            <% end %>
 
-    <table class="table table-striped" style="margin-top: 50px;">
-        <thead>
-            <tr>
-                <th> Description </th>
-                <th> Quantité</th>
-                <th> Prix</th>
-            </tr>
-        </thead>
+            <%= link_to 'Passer commande', orders_path, method: 'post', class: 'btn btn-outline-primary float-right' %>
 
-        <tbody>
-            <tr>
-                <td> Total </td>
-                <td> <%= @quantity_total %> </td>
-                <td> <%= number_to_currency @price_total, unit: "€", separator: ",", format: "%n%u" %> </td>
-
-            </tr>
-        </tbody>
-
-    </table>
+        <% else %>
+            <h3 class="text-center text-muted">Panier vide</h3>
+        <% end %>
 
         </div>
     </div>
