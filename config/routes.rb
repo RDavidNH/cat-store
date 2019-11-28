@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   resources :items
   resources :carts
   resources :users
-  # , only: [:show]
+  resources :orders
   root "items#index"
 end
