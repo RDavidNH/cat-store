@@ -1,6 +1,6 @@
 # README
 
-## THP-CAT-STORE. WITH :cœurs: FROM GROUPE1 :desert:COMPOSITION DE NOTRE GROUPE :drapeau_noir_flottant:‍:tête_de_mort:
+## THP-CAT-STORE. WITH :heart: FROM GROUPE1 :desert: COMPOSITION DE NOTRE GROUPE :drapeau_noir_flottant: :tête_de_mort:
 
 - Rabedaoro David N H / David N H - https://github.com/RDavidNH (Back-end & Front-end)
 - Be Anjara Houssen - https://github.com/BeAnjara (Back-end & Front-end)
