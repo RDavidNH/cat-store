@@ -24,7 +24,7 @@
                                 <td> <%= i.item.description %> </td>
                                 <td> <%= image_tag 'sleepcutecat.jpg', width: 50, class: '' %></td>
                                 <td> <%= i.quantity %></td>
-                                <td> <%= number_to_currency i.item.price * i.quantity, unit: "€", separator: ",", format: "%n%u" %> </td>
+                                <td> <%= number_to_currency i.item.price * i.quantity, unit: "$", separator: ",", format: "%n%u" %> </td>
                             </tr>
                         <% end %>
                         <tr class="bg-yellow">
