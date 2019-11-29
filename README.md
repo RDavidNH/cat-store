@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## THP-CAT-STORE. WITH :cœurs: FROM GROUPE1 :desert:COMPOSITION DE NOTRE GROUPE :drapeau_noir_flottant:‍:tête_de_mort:
 
-Things you may want to cover:
+- Rabedaoro David N H / David N H - https://github.com/RDavidNH (Back-end & Front-end)
+- Be Anjara Houssen - https://github.com/BeAnjara (Back-end & Front-end)
+- Alain Christian RADAFIARIJAONA - https://github.com/christianRAD (Back-end & Front-end)
+- RABEHARISOA Rinah Philbert - https://github.com/RinahPh (Front-end)
+- Christian razafindrakoto - https://github.com/chris-m11 (Front-end)
+- Rasamson hajalalaina steven - https://github.com/steven-hash (Front-end)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+:augmenter_luminosité: Venez vivre l'expérience Petit Chaton en visitant notre application :flèche_droite: https://thp-cat-store.herokuapp.com/ :feu:
 
 
