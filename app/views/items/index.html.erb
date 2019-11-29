@@ -10,7 +10,7 @@
 
       <div class="card h-100 shadow">
         <!-- <a href="#"><img class="card-img-top" src="./img/chat7.jpg" alt="" style="height:200px"></a> -->
-        <a href="<%= item_path(i.id) %>"><%= image_tag 'sleepcutecat.jpg', width: '100%', class: ''  %></a>
+        <a href="<%= item_path(i.id) %>"><%= image_tag i.image_url, width: '100%', class: ''  %></a>
         <div class="card-body" style="border-top:3px solid #ffc107;">
             <h4 class="card-title">
                 <%= i.title %>
