@@ -6,9 +6,4 @@ class RegistrationsController < Devise::RegistrationsController
         devise_parameter_sanitizer.permit(:account_update, except: [:password], keys: [:firstname, :lastname, :description])
 
     end  
-
-#   protected  
-#   def after_sign_up_path_for(resource)
-#     #   '/cities/new'
-#   end
 end
