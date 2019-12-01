@@ -7,4 +7,5 @@ class User < ApplicationRecord
    belongs_to :cart, optional: true
    has_many :carts
    has_many :orders, through: :carts
+   has_one_attached :avatar
 end

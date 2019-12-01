@@ -26,7 +26,7 @@ class CartsController < ApplicationController
                 end
                 if @reponse == true
                         @order.quantity = @order.quantity + 1 
-                        @order.save
+                        @order.save  #nkjdsjdjks
                 else
                     order = Order.create(:cart => current_cart, :item => item, :quantity => params[:quantity])
                 end
