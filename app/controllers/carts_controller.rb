@@ -13,16 +13,30 @@ class CartsController < ApplicationController
     end
 
     def create
-
+        current_cart = Cart.find_by(:user => current_user, :status => "on")
         item = Item.find(params[:id])
 
-        current_cart = Cart.find_by(:user => current_user, :status => "on")
+        if current_cart
+            if current_cart.orders
+                current_cart.orders.each do |order|
+                    if order.item.id == item.id
+                        @reponse = true
+                        @order = order
+                    end
+                end
+                if @reponse == true
+                        @order.quantity = @order.quantity + 1 
+                        @order.save
+                else
+                    order = Order.create(:cart => current_cart, :item => item, :quantity => params[:quantity])
+                end
+            end       
+        end
 
         if not current_cart
             current_cart = Cart.create(:user => current_user, :status => "on")
+            order = Order.create(:cart => current_cart, :item => item, :quantity => params[:quantity])
         end
-
-        order = Order.create(:cart => current_cart, :item => item, :quantity => params[:quantity])
 
         # if current_user.cart
         #     current_cart = current_user.cart
