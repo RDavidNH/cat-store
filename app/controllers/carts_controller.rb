@@ -38,24 +38,7 @@ class CartsController < ApplicationController
             order = Order.create(:cart => current_cart, :item => item, :quantity => params[:quantity])
         end
 
-        # if current_user.cart
-        #     current_cart = current_user.cart
-        # else
-        #     current_cart = Cart.create()
-        #     current_user.cart = current_cart
-        #     current_user.save
-        # end
-
-
-        # order = CartItem.find_by(item: item, cart: current_cart)
-
-        # if order
-        # 	order.quantity += 1
-        # 	order.save
-        # else
-        # 	cart_items = CartItem.create(cart: current_cart, item: item, quantity: 1)
-        # end
-
+        redirect_to '/', :flash => {:success => 'Produit ajouté au panier.'}
 
     end
 
